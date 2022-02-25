@@ -1,28 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int y,a,b;
-    scanf("%d",&y);
-    if(y%4==0)
+    int n;
+    scanf("%d",&n);
+    if(n%400==0)
     {
-        if(y%100==0)
-        {
-            if(y%400==0)
-            {
-                printf("True");
-            }
-            else
-            {
-                printf("False");
-            }
-        }
-        else
-        {
-            printf("True");
-        }
+        printf("True");
     }
     else
     {
-        printf("False");
+        if(n%100==0)
+        {
+            printf("False");
+        }
+        else if(n%4==0)
+        {
+            printf("True");
+        }
+        else
+        {
+            printf("False");
+        }
+        
     }
 }
