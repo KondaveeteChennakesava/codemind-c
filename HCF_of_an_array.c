@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 int main()
 {
     int n,i,gcd;
@@ -23,4 +24,5 @@ int main()
        }
     }
     printf("%d ",gcd);
+    return 0;
 }
