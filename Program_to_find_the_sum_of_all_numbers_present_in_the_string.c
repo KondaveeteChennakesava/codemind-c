@@ -1,22 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    char str[1000];
-    int sum,i,count=0;
-    scanf("%[^
-]s",str);
-
-    for(i=0; str[i]!=NULL;i++)
+    char string[80];
+    int count, nc = 0, sum = 0;
+    scanf("%s", string);
+    for (count = 0; string[count] != NULL; count++)
     {
-        count++;
-    }
-    sum=0;
-    for(i=0 ; i<count ;i++)
-    {
-        if(str[i]>='0' && str[i]<='9')
+        if ((string[count] >= '0') && (string[count] <= '9'))
         {
-            sum=sum+(str[i]-48);
+            nc += 1;
+            sum += (string[count] - '0');
         }
     }
-    printf("%d",sum);
+    printf("%d", sum);
 }
