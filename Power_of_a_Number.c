@@ -2,13 +2,10 @@
 #include<math.h>
 int main()
 {
-    int a,b,c,n,i,d;
+    int a,b,c,k,l;
     scanf("%d%d%d",&a,&b,&c);
-    d=a;
-    for(n=1;n<b;n++)
-    {
-        a=d*a;
-    }
-    
-    printf("%d",a%c);
+    k=pow(a,b);
+    l=k%c;
+    printf("%d",l);
+    return 0;
 }
