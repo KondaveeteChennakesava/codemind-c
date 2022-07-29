@@ -1,40 +1,36 @@
 #include<stdio.h>
-#include<stdlib.h>
+#include<math.h>
 int main()
 {
-    int n,t,a,r,p,sum=0,z,k=0,ar[100],i;
-    scanf("%d%d",&n,&a);
-    t=a;
-    p=n;
-    while(t)
+    int n,q,r,c=0,res;
+    scanf("%d",&n);
+    q=n;
+    res=0;
+    while(q>0)
     {
-     r=p%10;
-     sum=(sum*10)+r;
-     p=p/10;
-     t--;
+        r=q%10;
+        res=(res*10)+r;
+        c=c+1;
+        q=q/10;
     }
-    t=a;
-    z=sum;
-    sum=0;
-    p=0;
-    while(t)
+    int arr[2],k,i,r1,q1,res1=0,l;
+    scanf("%d",&k);
+    i=pow(10,c-k);
+    arr[0]=n/i;
+    l=res/i;
+    while(l>0)
     {
-      r=z%10;
-      sum=(sum*10)+r;
-      z=z/10;
-      t--;
+        r1=l%10;
+        res1=(res1*10)+r1;
+        l=l/10;
     }
-    t=n;
-    while(t)
+    arr[1]=res1;
+    if(arr[0]>arr[1])
     {
-        r=t%10;
-        ar[k]=r;
-        k++;
-        t=t/10;
+        printf("%d",arr[0]-arr[1]);
     }
-    for(i=k-1;i>k-1-a;i--)
+    else
     {
-        t=(t*10)+ar[i];
+        printf("%d",arr[1]-arr[0]);
     }
-    printf("%d",abs(t-sum));
 }
