@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,n,i;
+    int a,b,i;
     scanf("%d%d",&a,&b);
-    for(i=a;i>0;i--)
+    for(i=a+b;i>0;i--)
     {
         if(a%i==0 && b%i==0)
         {
