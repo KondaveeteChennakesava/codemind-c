@@ -1,20 +1,26 @@
-#include <stdio.h>    
-int main()    
-{    
-    int x,i;
-    scanf("%d",&x);
-    int arr[x];
-    for(i=0;i<x;i++)
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
-    int length = sizeof(arr)/sizeof(arr[0]);    
-    for(int i = 0; i < length; i++) {    
-        for(int j = i + 1; j < length; j++) {    
-            if(arr[i] == arr[j])    
-                printf("%d
-", arr[j]);    
-        }    
-    }    
-    return 0;    
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(i!=j)
+            {
+            if(a[i]==a[j])
+            {
+                printf("%d",a[i]);
+                i=n+1;
+                break;
+            }
+            }
+        }
+    }
 }
