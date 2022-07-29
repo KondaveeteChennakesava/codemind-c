@@ -2,29 +2,39 @@
 #include<math.h>
 int main()
 {
-    int n,i,x,l,u;
-    scanf("%d",&n);
-    for(i=1;i<n;i++)
+    int a;
+    scanf("%d",&a);
+    int arr[50],i,r,min;
+    int d1,d2,c=0;
+    for (i=0; i<50; i++)
     {
-        x=pow(2,i);
-        if(n<=x)
+        r=pow(2,i);
+        arr[i]=r;
+    }
+    for (i=0; i<50; i++)
+    {
+        if (a<arr[i])
+        {
+            d1=arr[i]-a;
+            d2=a-arr[i-1];
+            if (d1>d2)
+            {
+                min=d2;
+                c=1;
+                break;
+            }
+            else
+            {
+                min=d1;
+                c=1;
+                break;
+            }
+        }
+        if (c==1)
         {
             break;
         }
     }
-    l=pow(2,i-1);
-    u=pow(2,i);
-    //printf("%d %d %d",l,n,u);
-    if(n==x)
-    {
-        printf("0");
-    }
-    else if(n-l>u-n)
-    {
-        printf("%d",u-n);
-    }
-    else
-    {
-        printf("%d",n-l);
-    }
+    printf("%d",min);
+    return 0;
 }
