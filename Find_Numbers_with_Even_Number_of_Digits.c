@@ -1,19 +1,26 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int x[20],n,i,count=0,d;
+    int n;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
-    scanf("%d",&x[i]);
+    int i,j,c,k;
+    long int arr[n];
     for(i=0;i<n;i++)
     {
-        d=(int)log10(x[i])+1;
-        if(d%2==0)
+        scanf("%ld",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        c=0;
+        while(arr[i]>0)
         {
-            count++;
+            c++;
+            arr[i]=arr[i]/10;
+        }
+        if(c%2==0)
+        {
+            k=k+1;
         }
     }
-    printf("%d",count++);
-    return 0;
+    printf("%d",k);
 }
