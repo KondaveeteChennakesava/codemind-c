@@ -2,9 +2,8 @@
 #include<math.h>
 int main()
 {
-    double p,r,t,ci;
+    double p,r,t,a;
     scanf("%lf%lf%lf",&p,&r,&t);
-    ci = p*pow((1+r/100),t);
-    printf("%.2lf",ci);
-    return 0;
+    a=p*pow((1+r/100),t);
+    printf("%.2f",a);
 }
