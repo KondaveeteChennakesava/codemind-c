@@ -1,21 +1,29 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,d,r,flag=0;
+    int n,q,r,c,s,a[20],i;
     scanf("%d",&n);
-    d=(int)log10(n);
-    while(n>0)
+    q=n;
+    i=0;
+    c=0;
+    while(q!=0)
     {
-        r=n/(int)ceil(pow(10,d));
-        if(r==6&&flag==0)
+        r=q%10;
+        a[i]=r;
+        q=q/10;
+        c=c+1;
+        i++;
+    }
+    for(i=c-1;i>=0;i--)
+    {
+        if(a[i]==6)
         {
-            printf("9");
-            flag=1;
+            a[i]=9;
+            break;
         }
-        else
-        printf("%d",r);
-        n=n%(int)ceil(pow(10,d));
-        d--;
+    }
+    for(i=c-1;i>=0;i--)
+    {
+        printf("%d",a[i]);
     }
 }
