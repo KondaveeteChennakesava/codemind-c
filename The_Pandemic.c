@@ -1,13 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int i;
-    scanf("%d",&i);
-    if(i==2)
-       printf("1");
-    else if(i==1)
-       printf("0");
+    int n;
+    scanf("%d",&n);
+    if(n<=1)
+    {
+        printf("0");
+    }
+    else if(n==2)
+    {
+        printf("1");
+    }
     else
-       printf("2");
-    return 0;
+    {
+        printf("2");
+    }
 }
